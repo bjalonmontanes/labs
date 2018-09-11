@@ -14,6 +14,8 @@ The purpuse of this lab is to determine which app is causing high CPU
 6.Ssh into the diego cell with high cpu, as a root, execute top, and copy the process pid consuming CPU (should be a java process).
 7. Take a look at the output of `cat /proc/<PID>/environ`
 8. Locate and copy the value for the field "application_id" You’ll see there some info such as app name, space name (_space_name_) and space id (_space_id_).
-To get the app org, open a terminal that contains cf cli command and execute 
-cf curl /v2/spaces/<space_id> to obtain the space information, such as organization url (organization_url)
-cf curl organization_url to get the organization name
+8. To get the app org, open a terminal that contains cf cli command and execute
+   - cf curl /v2/spaces/<space_id> to obtain the space information, such as organization url (organization_url)
+   - cf curl organization_url to get the organization name
+   
+
