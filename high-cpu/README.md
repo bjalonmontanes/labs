@@ -7,7 +7,7 @@ The purpuse of this lab is to determine which app is causing high CPU
 ## Instructions
 
 1. Donwnload the [app](application.war)
-2. Push it to your preferred org and space (e.g `cf push high-cpu -p application.war)
+2. Push it to your preferred org and space (e.g `cf push high-cpu -p application.war`)
 3. Visit the app in your web browser and click on the link _Generate an infinite loop_
 4. Ssh into ops manager 
 5. Execute `bosh -e <YOUR-ENV> -d < vms --vitals` to see which diego Cell has high cpu. Notice that the app will use only one CPU, so if the Diego VM has 2 core, you will be looking for a VM consuming 50% of CPU since bosh will show the total average. If there are 4 cores, then 25% of CPU.
