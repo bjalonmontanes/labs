@@ -12,7 +12,7 @@ The purpuse of this lab is to determine which app is causing high CPU
 4. Ssh into ops manager 
 5. Execute `bosh -e <YOUR-ENV> -d < vms --vitals` to see which diego Cell has high cpu. Notice that the app will use only one CPU, so if the Diego VM has 2 core, you will be looking for a VM consuming 50% of CPU since bosh will show the total average. If there are 4 cores, then 25% of CPU.
 6.Ssh into the diego cell with high cpu, as a root, execute top, and copy the process pid consuming CPU (should be a java process).
-7. Take a look at the output of cat /proc/<PID>/environ
+7. Take a look at the output of `cat /proc/<PID>/environ`
 8. Locate and copy the value for the field "application_id" You’ll see there some info such as app name, space name (_space_name_) and space id (_space_id_).
 To get the app org, open a terminal that contains cf cli command and execute 
 cf curl /v2/spaces/<space_id> to obtain the space information, such as organization url (organization_url)
