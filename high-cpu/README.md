@@ -17,5 +17,6 @@ The purpuse of this lab is to determine which app is causing high CPU
 8. To get the app org, open a terminal that contains cf cli command and execute
    - cf curl /v2/spaces/<space_id> to obtain the space information, such as organization url (organization_url)
    - cf curl organization_url to get the organization name
+9. Stop de app with `cf stop high-cpu` so it stops comsuming CPU in the Diego Cell
    
 
